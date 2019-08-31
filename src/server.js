@@ -125,7 +125,7 @@ export default ({ clientStats }) => async (req, res) => {
 
     // ------------------------------------------------------------------------------------------------------
 
-    const html = <Html assets={assets} store={store} content={content} head={helmetContext.helmet} />;
+    const html = <Html assets={assets} store={store} content={content} />;
 
     const ssrHtml = `<!doctype html>${ReactDOM.renderToString(html)}`;
 
