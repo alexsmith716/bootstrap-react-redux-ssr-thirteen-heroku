@@ -3,22 +3,11 @@ import PropTypes from 'prop-types';
 import serialize from 'serialize-javascript';
 // import config from '../../config/config';
 
-const Html = ({ assets, store, content, head }) => {
-
-  // console.log('>>>>>> HTML.JS > assets: ', assets);
-  // console.log('>>>>>> HTML.JS > store: ', store);
-  // console.log('>>>>>> HTML.JS > content: ', content);
-  console.log('>>>>>> HTML.JS > head: ', head);
+const Html = ({ assets, store, content }) => {
 
   return (
     <html lang="en-US">
       <head>
-
-        head.base.toString()
-        head.title.toString()
-        head.meta.toString()
-        head.link.toString()
-        head.script.toString()
 
         <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
         <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover" />
