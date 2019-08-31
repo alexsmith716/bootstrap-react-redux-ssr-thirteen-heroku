@@ -24,36 +24,91 @@ $dropdown-bg: darken($dropdown-bg, 20%);
 @import "~bootstrap/scss/_code.scss";
 @import "~bootstrap/scss/_grid.scss";
 @import "~bootstrap/scss/_tables.scss";
-@import "~bootstrap/scss/_forms.scss";
+// @import "~bootstrap/scss/_forms.scss";
 @import "~bootstrap/scss/_buttons.scss";
 @import "~bootstrap/scss/_transitions.scss";
 @import "~bootstrap/scss/_dropdown.scss";
 @import "~bootstrap/scss/_button-group.scss";
 @import "~bootstrap/scss/_input-group.scss";
-@import "~bootstrap/scss/_custom-forms.scss";
+// @import "~bootstrap/scss/_custom-forms.scss";
 @import "~bootstrap/scss/_nav.scss";
 @import "~bootstrap/scss/_navbar.scss";
 @import "~bootstrap/scss/_card.scss";
-@import "~bootstrap/scss/_breadcrumb.scss";
-@import "~bootstrap/scss/_pagination.scss";
+// @import "~bootstrap/scss/_breadcrumb.scss";
+// @import "~bootstrap/scss/_pagination.scss";
 @import "~bootstrap/scss/_badge.scss";
-@import "~bootstrap/scss/_jumbotron.scss";
+// @import "~bootstrap/scss/_jumbotron.scss";
 @import "~bootstrap/scss/_alert.scss";
-@import "~bootstrap/scss/_progress.scss";
-@import "~bootstrap/scss/_media.scss";
+// @import "~bootstrap/scss/_progress.scss";
+// @import "~bootstrap/scss/_media.scss";
 @import "~bootstrap/scss/_list-group.scss";
 @import "~bootstrap/scss/_close.scss";
 @import "~bootstrap/scss/_modal.scss";
 @import "~bootstrap/scss/_tooltip.scss";
 @import "~bootstrap/scss/_popover.scss";
-@import "~bootstrap/scss/_carousel.scss";
+// @import "~bootstrap/scss/_carousel.scss";
 @import "~bootstrap/scss/_utilities.scss";
-@import "~bootstrap/scss/_print.scss";
+// @import "~bootstrap/scss/_print.scss";
 
-@import "~@fortawesome/fontawesome-free/scss/fontawesome.scss";
-@import "~@fortawesome/fontawesome-free/scss/brands.scss";
-@import "~@fortawesome/fontawesome-free/scss/solid.scss";
-@import "~@fortawesome/fontawesome-free/scss/regular.scss";
+// ---------------------------------------------
+
+$fa-font-path : "~@fortawesome/fontawesome-free/webfonts";
+$fa-font-size-base:    16px !default;
+$fa-font-display:      auto !default;
+$fa-css-prefix:        fa !default;
+$fa-version:           "5.10.2" !default;
+$fa-border-color:      #eee !default;
+$fa-inverse:           #fff !default;
+$fa-li-width:          2em !default;
+$fa-fw-width:          (20em / 16);
+$fa-primary-opacity:   1 !default;
+$fa-secondary-opacity: .4 !default;
+
+// Convenience function used to set content property
+@function fa-content($fa-var) {
+  @return unquote("\"#{ $fa-var }\"");
+}
+
+$fa-var-500px: \f26e;
+$fa-var-headphones: \f025;
+$fa-var-headphones-alt: \f58f;
+$fa-var-sign-in-alt: \f2f6;
+$fa-var-sign-out-alt: \f2f5;
+
+// ---------------------------------------------
+
+@import "~@fortawesome/fontawesome-free/scss/mixins";
+@import "~@fortawesome/fontawesome-free/scss/core";
+@import "~@fortawesome/fontawesome-free/scss/fixed-width";
+
+.#{$fa-css-prefix}-500px:before { content: fa-content($fa-var-500px); }
+.#{$fa-css-prefix}-headphones:before { content: fa-content($fa-var-headphones); }
+.#{$fa-css-prefix}-headphones-alt:before { content: fa-content($fa-var-headphones-alt); }
+.#{$fa-css-prefix}-sign-in-alt:before { content: fa-content($fa-var-sign-in-alt); }
+.#{$fa-css-prefix}-sign-out-alt:before { content: fa-content($fa-var-sign-out-alt); }
+
+// ---------------------------------------------
+
+@font-face {
+  font-family: 'Font Awesome 5 Free';
+  font-style: normal;
+  font-weight: 900;
+  font-display: $fa-font-display;
+  src: url('#{$fa-font-path}/fa-solid-900.eot');
+  src: url('#{$fa-font-path}/fa-solid-900.eot?#iefix') format('embedded-opentype'),
+  url('#{$fa-font-path}/fa-solid-900.woff2') format('woff2'),
+  url('#{$fa-font-path}/fa-solid-900.woff') format('woff'),
+  url('#{$fa-font-path}/fa-solid-900.ttf') format('truetype'),
+  url('#{$fa-font-path}/fa-solid-900.svg#fontawesome') format('svg');
+}
+
+.fa,
+.fas {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+}
+
+// ---------------------------------------------
 
 @import "../app/mixins.scss";
 
