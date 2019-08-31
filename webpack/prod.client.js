@@ -367,7 +367,8 @@ module.exports = {
       swDest: path.join(buildPath, 'service-worker.js'),
       clientsClaim: true,
       skipWaiting: true,
-      importWorkboxFrom: 'local',
+      // importWorkboxFrom: 'local',
+      importWorkboxFrom: 'cdn',
       navigateFallback: '/dist/index.html',
       runtimeCaching: [
         {
